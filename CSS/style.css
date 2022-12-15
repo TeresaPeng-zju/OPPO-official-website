@@ -1,0 +1,433 @@
+                .w {
+                    width: 1180px;
+                    margin: 0 auto;
+                }
+                
+                .topBar {
+                    height: 37px;
+                    border-top: 3px solid #30935d;
+                    background-color: #2b2b2b;
+                    overflow: hidden;
+                }
+                
+                .barIn {
+                    height: 37px;
+                    line-height: 37px;
+                }
+                /*行高可以撑开块级盒子和浮动盒子的高，但是撑不开行内元素的高。
+                如果有一行，可以高和行高一起给；
+                如果有很多行，想让内容自动撑开高度，就可以只给行高。 */
+                
+                .barL {
+                    float: left;
+                }
+                
+                .barL a {
+                    float: left;
+                    margin-right: 20px;
+                    margin-top: 6px;
+                }
+                
+                .barL p {
+                    float: left;
+                    color: #30935d;
+                    font-weight: bold;
+                    /* font-weight：400等于normal 700等于bold */
+                }
+                
+                .barR {
+                    float: right;
+                }
+                
+                .barR li {
+                    float: left;
+                }
+                
+                .barR a {
+                    padding: 0 15px;
+                    border-right: 1px solid #999999;
+                }
+                /* 边框一定是设给a，不是设给li，不然会超级长 */
+                
+                .barR .cart {
+                    padding-left: 43px;
+                    background: url(../images/icons/cart_02.png) no-repeat 15px center;
+                }
+                /* 15px：指距离盒子左边15px。15px是水平方向，center是垂直居中，背景位置只有水平和垂直两个值。其他形式使用定位 */
+                
+                .header {
+                    background-color: pink;
+                    height: 87px;
+                }
+                
+                .logo {
+                    width: 160px;
+                    height: 30px;
+                    float: left;
+                }
+                
+                .logo a {
+                    display: block;
+                    width: 160px;
+                    height: 30px;
+                    background: url(../images/logo.png) no-repeat;
+                    margin-top: 30px;
+                    /* 如果这里使用padding，不会有变化 */
+                    text-indent: -9999px;
+                }
+                
+                .headerR {
+                    float: right;
+                }
+                
+                .header li {
+                    float: left;
+                    line-height: 87px;
+                    /* 如果这里是height不是line-height，文字不会垂直居中 */
+                    margin: 0 18px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                
+                .header a {
+                    color: #2b2b2b;
+                    /* a的颜色只能选中a来改，不能继承 */
+                    /* a也不能继承父元素的text-decoration，stonrg */
+                }
+                /* 整块headerR是向右浮动，里面分割好的li是向左浮动，否则li的顺序或位置会不对 */
+                
+                .banner a {
+                    display: block;
+                    height: 621px;
+                    background: url(../images/banner.jpg) no-repeat center top;
+                }
+                /* 如果直接在HTML中添加img，版心不会对img有裁剪，会出现横向滚动条。背景图不占位，则不会出现这样的情况。 */
+                /* 两个参数：水平 垂直；如果a的高度不是621px（和图片相等），不加top就会出问题 */
+                
+                .star {
+                    height: 846px;
+                    background-color: #f2f2f2;
+                }
+                
+                .starIn {
+                    height: 846px;
+                    background-color: pink;
+                }
+                
+                .starTil {
+                    text-align: center;
+                    padding-top: 47px;
+                }
+                
+                .starTil .line {
+                    height: 1px;
+                    width: 92px;
+                    background-color: #dadada;
+                    /* 相当于设置了一个1px的盒子，需要填充的是其背景色，而非color。多多观察是不是自己的参数名称写错了。 */
+                    margin: 0 auto;
+                    /* 块级元素居中 */
+                }
+                
+                .starTil h3 {
+                    height: 48px;
+                    line-height: 48px;
+                    font-size: 28px;
+                    color: #2b2b2b;
+                    font-weight: 400;
+                    /* 这里设置font-weight的原因是h3的默认样式会加粗，如果不调回默认就会OPPO STAR 明星机型都加粗 */
+                }
+                
+                .starTil p {
+                    height: 62px;
+                    line-height: 62px;
+                }
+                
+                .starTil a {
+                    color: #00935f
+                }
+                
+                .starTil .line {
+                    transition: 0.5s;
+                }
+                
+                .starTil:hover .line {
+                    width: 160px;
+                }
+                /* 如果hover写在line后，鼠标碰到line才会变长；写在starTil后，鼠标碰到盒子就会变长 */
+                
+                .mobile {
+                    width: 1200px;
+                }
+                
+                .mobile li {
+                    height: 570px;
+                    width: 280px;
+                    float: left;
+                    margin-right: 20px;
+                    text-align: center;
+                    border-bottom: 5px solid #dfdfdf;
+                }
+                
+                .mobile h4 {
+                    height: 60px;
+                    line-height: 60px;
+                    color: #2b2b2b
+                }
+                /* 能设置height的盒子，最好设置height */
+                
+                .mobile .store {
+                    height: 30px;
+                    line-height: 30px;
+                    color: #999999
+                }
+                
+                .mobile .buy {
+                    height: 20px;
+                    line-height: 20px;
+                    color: #00953f
+                }
+                
+                .mobile .buy span {
+                    width: 18px;
+                    height: 18px;
+                    background-color: #00935f;
+                    border-radius: 50%;
+                    display: inline-block;
+                    color: #fff;
+                    font-family: "黑体";
+                    line-height: 18px;
+                    text-align: center;
+                }
+                
+                .acc {
+                    height: 1050px;
+                    border-color: #f6f6f6;
+                }
+                
+                .accIn {
+                    height: 1050px;
+                    background-color: tan;
+                }
+                
+                .accbox {
+                    height: 900px;
+                    background-color: pink;
+                    margin-top: 50px;
+                }
+                
+                .accbox .accL {
+                    width: 580px;
+                    height: 900px;
+                    float: left;
+                    background-color: #30935d;
+                }
+                
+                .accbox .shu {
+                    width: 280px;
+                    height: 580px;
+                    margin-right: 20px;
+                }
+                
+                .accbox .fang {
+                    width: 280px;
+                    height: 280px;
+                    margin-bottom: 20px;
+                }
+                
+                .accbox .heng {
+                    width: 580px;
+                    height: 280px;
+                }
+                
+                .accbox .accR {
+                    width: 580px;
+                    height: 900px;
+                    float: right;
+                    background-color: #30935d;
+                }
+                
+                .accbox li {
+                    float: left;
+                    background-color: aqua;
+                }
+                /* 原理：设计浮动，让宽度不够的盒子自动掉下来 */
+                
+                .accR .heng {
+                    margin-bottom: 20px;
+                }
+                /* 写在后面可以覆盖前面的 */
+                
+                .search {
+                    height: 710px;
+                    background-color: #eaeaea;
+                    overflow: hidden;
+                }
+                
+                .searchIn {
+                    height: 710px;
+                    border-color: pink;
+                }
+                
+                .searchCon {
+                    height: 580px;
+                    margin-top: 40px;
+                }
+                
+                .searchL {
+                    height: 580px;
+                    width: 800px;
+                    float: left;
+                    background-color: tan;
+                }
+                
+                .searchL li {
+                    float: left;
+                    height: 270px;
+                    width: 380px;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    background-color: tomato;
+                }
+                
+                .searchR {
+                    height: 580px;
+                    width: 380px;
+                    float: right;
+                    background-color: violet;
+                }
+                
+                .footer {
+                    height: 445px;
+                }
+                
+                .footerIn {
+                    height: 124px;
+                    border-bottom: 1px solid #e1e1e1;
+                }
+                
+                .footerTil {
+                    height: 124px;
+                }
+                
+                .footerTil ul {
+                    padding-top: 44px;
+                }
+                
+                .footerTil li {
+                    width: 182px;
+                    height: 44px;
+                    padding-left: 52px;
+                    /* 把左边留出来放图片 */
+                    /* 不知道为什么我的li看不到背景颜色 */
+                    float: left;
+                }
+                
+                .footerTil .color {
+                    color: #2b2b2b;
+                }
+                
+                .footerTil .a1 {
+                    background: url(../images/icons/list01_02.png) no-repeat;
+                }
+                
+                .footerTil .a2 {
+                    background: url(../images/icons/list02_02.png) no-repeat;
+                }
+                
+                .footerTil .a3 {
+                    background: url(../images/icons/list03_02.png) no-repeat;
+                }
+                
+                .footerTil .a4 {
+                    background: url(../images/icons/list04_02.png) no-repeat;
+                }
+                
+                .footerTil .a5 {
+                    background: url(../images/icons/list05_02.png) no-repeat;
+                }
+                
+                .aboutus {
+                    height: 245px;
+                }
+                
+                .aboutus dl {
+                    width: 190px;
+                    line-height: 30px;
+                    float: left;
+                    margin-top: 36px;
+                }
+                
+                .aboutus dt {
+                    font-weight: 700;
+                    color: #2b2b2b;
+                }
+                
+                .aboutus dd a {
+                    padding-left: 12px;
+                    background: url(../images/sprite.png) 0 -191px no-repeat;
+                }
+                
+                .aboutus .weibo {
+                    padding-left: 24px;
+                    background: url(../images/sprite.png) no-repeat;
+                }
+                
+                .aboutus .tencent {
+                    padding-left: 24px;
+                    background: url(../images/sprite.png) 0 -27.3px no-repeat;
+                }
+                
+                .contact dd {
+                    padding-left: 52px;
+                    line-height: 20px;
+                }
+                
+                .contact .tel {
+                    color: #00935e;
+                }
+                
+                .contact .time {
+                    color: #cccccc
+                }
+                
+                .contact .dianhua {
+                    background: url(../images/icons/phone_02.png) no-repeat;
+                }
+                
+                .contact .qq {
+                    background: url(../images/icons/qq_02.png) no-repeat;
+                    margin-top: 25px;
+                }
+                
+                .footerFT {
+                    height: 70px;
+                    background-color: #2b2b2b;
+                    border-top: 5px solid #000;
+                }
+                
+                .footerFT .copy {
+                    margin-top: 24px;
+                    float: left;
+                }
+                
+                .footerFT span {
+                    margin-left: 20px;
+                    color: #ccc;
+                }
+                
+                .footerFT .inform {
+                    float: right;
+                    height: 70px;
+                    line-height: 70px;
+                }
+                
+                .footerFT li {
+                    float: left;
+                    width: 56px;
+                    margin-left: 36px;
+                    line-height: 70px;
+                }
+                
+                .footerFT a {
+                    color: #cccccc;
+                }

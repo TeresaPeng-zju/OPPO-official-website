@@ -1,0 +1,33 @@
+/* 因为不是全部标签都有默认内外边距，做项目的时候清除默认边距可以选中对应标签去清除，代码执行效率就更高 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p,
+dl,
+dt,
+dd,
+ul,
+li,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font: 14px "微软雅黑";
+    color: #999;
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
